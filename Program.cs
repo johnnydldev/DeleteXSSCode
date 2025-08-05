@@ -1,6 +1,4 @@
-﻿using System.Data.SqlTypes;
-using System.Data.SqlClient;
-
+﻿
 namespace ThreadTest
 {
     internal class Program

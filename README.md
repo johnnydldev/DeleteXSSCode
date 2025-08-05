@@ -9,7 +9,7 @@ This project was created with Visual Studio 2022 and .Net Core 8 [Class Verifier
 This I use and Regex pattern to capture the HTML tags and the Javascript scripting code injected:
 
 ```c#
-    //Import the component with follow sentence above the main component with you've been work
+    //The DeleteXSSText code used to delete malicious code injected
     public static string DeleteXSSText(string value)
     {
         if (string.IsNullOrEmpty(value))
@@ -49,4 +49,50 @@ This I use and Regex pattern to capture the HTML tags and the Javascript scripti
 
     }//End delete XSS text method
 
+```
+
+More information about implementation on **Program.cs** class on [Program.cs info](https://github.com/johnnydldev/DeleteXSSCode/blob/main/Program.cs)
+
+> [!TIP]
+> The implementation of **DeleteXSSText** you can do it the follow way:
+
+```c#
+    //Main method implementation to test
+    static void Main(string[] args)
+    {
+    
+        try
+        {
+            //String that simulate the malicious code injected on user input.
+            string value = """
+                Hola mi nombre es
+
+                <div id='item-container'>
+                    <section class="item-user-name">
+                
+                    </section>
+                </div>
+                
+                <script type="module" src="../algo/path">
+                    document.getElementById('');
+                </script>
+
+                Juan
+
+                """;
+
+            //Calling the method to sanitizing the info text of user input
+            value = VerifierXSS.DeleteXSSText(value);
+
+            //Printing the string sanitizated
+            Console.WriteLine(value);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error {ex.Message}");
+
+        }//End catching error
+
+    }//End main method
+    
 ```
