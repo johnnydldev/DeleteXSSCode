@@ -1,6 +1,6 @@
 # Detecting XSS code and deleting it
 
-This project was created with Visual Studio 2022 and .Net Core 8 [Class VerifierXSS link](https://github.com/johnnydldev/DeleteXSSCode/blob/main/VerifierXSS.cs).
+This project was created with Visual Studio 2022 and .Net Core 8, class [VerifierXSS](https://github.com/johnnydldev/DeleteXSSCode/blob/main/VerifierXSS.cs)  link.
 
 > [!IMPORTANT]
 >
@@ -51,7 +51,7 @@ This I use and Regex pattern to capture the HTML tags and the Javascript scripti
 
 ```
 
-More information about implementation on **Program.cs** class on [Program.cs info](https://github.com/johnnydldev/DeleteXSSCode/blob/main/Program.cs)
+More information about implementation on [Program.cs info](https://github.com/johnnydldev/DeleteXSSCode/blob/main/Program.cs) class
 
 > [!TIP]
 > The implementation of **DeleteXSSText** you can do it the follow way:
